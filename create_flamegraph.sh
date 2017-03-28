@@ -58,4 +58,4 @@ fi
 jfr_filename=$(basename $jfr_file)
 
 # Use folded command
-${JFG_DIR}/flamegraph-output.sh folded $* | $FLAMEGRAPH_DIR/flamegraph.pl --title "Flame Graph: $jfr_filename"
+${JFG_DIR}/flamegraph-output.sh folded $* | $FLAMEGRAPH_DIR/flamegraph.pl --title "Flame Graph: $jfr_filename" --minwidth 1
