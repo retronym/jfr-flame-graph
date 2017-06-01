@@ -36,7 +36,7 @@ function help {
 
 jfr_file=""
 
-while getopts "df:airsx:y:" opts
+while getopts "df:aitrsx:y:" opts
 do
   case $opts in
     f)
@@ -58,4 +58,4 @@ fi
 jfr_filename=$(basename $jfr_file)
 
 # Use folded command
-${JFG_DIR}/flamegraph-output.sh folded $* | $FLAMEGRAPH_DIR/flamegraph.pl --title "Flame Graph: $jfr_filename" --minwidth 1
+${JFG_DIR}/flamegraph-output.sh folded $* | $FLAMEGRAPH_DIR/flamegraph.pl --title "Flame Graph: $jfr_filename" --minwidth 2 --width 2600
